@@ -4,50 +4,16 @@ public class Main {
     public static void main(String[] args) {
 
         //Create the Scanner Object
-        Scanner melissa = new Scanner(System.in);
-        System.out.println("Enter username:");
+        Scanner scanner = new Scanner(System.in);
 
-        String userName = melissa.nextLine(); // Read User input using scanner object
+        //  String userName = scanner.nextLine(); // Read User input using scanner object
 
-        System.out.println("Let's Play Tic Tac Toe " + userName + "!");
-        System.out.println("Game Board");
-        System.out.println("- - -");
-        System.out.println("- - -");
-        System.out.println("- - -");
-        //Create Player 1 - Ask user to input name
-        class gameBoard {
-            //gameBoard has 9 fields
-            public int topLeft;
-            public int topMid;
-            public int topRight;
-            public int midLeft;
-            public int midMid;
-            public int midRight;
-            public int bottomLeft;
-            public int bottomMid;
-            public int bottomRight;
+        //Initialize the board
+        GameBoard gameBoard = new GameBoard();
 
-            //Constructor used to initialize the class
-            public gameBoard(int sTopLeft, int sTopMid, int sTopRight,
-                             int sMidLeft, int sMidMid, int sMidRight,
-                             int sBotRight, int sBotMid, int sBotLeft){
-                topLeft = sTopLeft;
-                topMid = sTopMid;
-                topRight =sTopRight;
-                midLeft = sMidLeft;
-                midMid = sMidMid;
-                midRight = sMidRight;
-                bottomLeft = sBotLeft;
-                bottomMid = sBotMid;
-                bottomRight = sBotRight;
-                }
-            //Methods for the class
-            public void setTL(int newValue) {
-                topLeft = newValue;
-            }
+        gameBoard.topLeft = "~";
 
-
-        }
+        System.out.println(gameBoard.topLeft + gameBoard.topMid);
 
         //Create Player Builder Class
 
