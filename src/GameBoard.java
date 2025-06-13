@@ -30,8 +30,14 @@ public class GameBoard {
         topLeft = newValue;
     }
 
-    public char getTopLeft() {
-        return topLeft;
+    public String getTopLeft() {
+        String dTopLeft = Character.toString(topLeft);
+        return dTopLeft;
+    }
+
+    public String getTopMid() {
+        String dTopMid = Character.toString(topMid);
+        return dTopMid;
     }
 
 

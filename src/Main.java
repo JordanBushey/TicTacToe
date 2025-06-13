@@ -11,9 +11,10 @@ public class Main {
         //Initialize the board
         GameBoard gameBoard = new GameBoard();
 
-        gameBoard.topLeft = "~";
+        gameBoard.topLeft = '~';
+        gameBoard.topMid = '~';
 
-        System.out.println(gameBoard.topLeft + gameBoard.topMid);
+        System.out.println(gameBoard.getTopLeft() + gameBoard.getTopMid());
 
         //Create Player Builder Class
 
