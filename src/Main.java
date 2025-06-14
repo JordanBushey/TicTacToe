@@ -11,6 +11,8 @@ public class Main {
         //Initialize the board
         GameBoard gameBoard = new GameBoard();
 
+        gameBoard.getBoard();
+
         gameBoard.topLeft = '~';
         gameBoard.topMid = '~';
         gameBoard.topRight ='~';
@@ -23,7 +25,15 @@ public class Main {
 
         gameBoard.getBoard();
 
+        gameBoard.getBoard();
 
+        String turnOne = scanner.nextLine();
+
+        gameBoard.userOneTurn(turnOne);
+
+        gameBoard.getBoard();
+
+        //Create a 2 users and method for X or O
 
         //Create Player Builder Class
 

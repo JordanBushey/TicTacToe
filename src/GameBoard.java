@@ -30,6 +30,16 @@ public class GameBoard {
         bottomRight = sBotRight;
     }
 
+    public void userOneTurn(String newValue) {
+        if (newValue.equals("Top Left")){
+            topLeft = 'X';
+        } else if (newValue.equals("Top Middle")){
+            topMid = 'X';
+        } else {
+            System.err.println("This is not an option orrrrr maybe I broke it :(");
+        }
+    }
+
     //Methods for the class to obtain the field values
     public void setTL(char newValue) {
         topLeft = newValue;
@@ -40,47 +50,13 @@ public class GameBoard {
     }
 
     public void getBoard() {
-        System.out.println(Character.toString(topLeft) + Character.toString(topMid) + Character.toString(topRight));
-        System.out.println(Character.toString(midLeft) + Character.toString(midMid) + Character.toString(midRight));
-        System.out.println(Character.toString(bottomLeft) + Character.toString(bottomMid) + Character.toString(bottomRight));
+        System.out.println(Character.toString(topLeft) + '|' + Character.toString(topMid) + '|' + Character.toString(topRight));
+//        System.out.println("______");
+        System.out.println(Character.toString(midLeft) + '|' + Character.toString(midMid) + '|' + Character.toString(midRight));
+//        System.out.println("______");
+        System.out.println(Character.toString(bottomLeft) + '|' + Character.toString(bottomMid) + '|' + Character.toString(bottomRight));
+        System.out.println("Select an available option.");
+        System.out.println("Top Right | Top Middle | Top Left");
     }
-
-
-    public String getTopLeft() {
-        return Character.toString(topLeft);
-    }
-
-    public String getTopMid() {
-        return Character.toString(topMid);
-    }
-
-    public String getTopRight() {
-        return Character.toString(topRight);
-    }
-
-    public String getMidLeft() {
-        return Character.toString(midLeft);
-    }
-
-    public String getMidMid() {
-        return Character.toString(midMid);
-    }
-
-    public String getMidRight() {
-        return Character.toString(midRight);
-    }
-
-    public String getBottomLeft() {
-        return Character.toString(bottomLeft);
-    }
-
-    public String getBottomMid() {
-        return Character.toString(bottomMid);
-    }
-
-    public String getBottomRight() {
-        return Character.toString(bottomRight);
-    }
-
 
 }
