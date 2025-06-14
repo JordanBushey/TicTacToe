@@ -33,11 +33,11 @@ public class GameBoard {
     }
 
     public void userOneTurn(String newValue) {
-        if (newValue.equals("Top Left")){
+        if (newValue.equals("TL")){
             topLeft = 'X';
-        } else if (newValue.equals("Top Middle") && !Character.toString(topMid).equals("O")){
+        } else if (newValue.equals("TM") && !Character.toString(topMid).equals("O")){
             topMid = 'X';
-        } else if (newValue.equals("Top Right")) {
+        } else if (newValue.equals("TR")) {
             topRight = 'X';
         }else if (newValue.equals("Middle Left")) {
             midLeft = 'X';
@@ -57,17 +57,17 @@ public class GameBoard {
     }
 
     public void userTwoTurn(String newValue) {
-        if (newValue.equals("Top Left")){
+        if (newValue.equals("TL")){
             topLeft = 'O';
-        } else if (newValue.equals("Top Middle") && !Character.toString(topMid).equals("X")){
+        } else if (newValue.equals("TM") && !Character.toString(topMid).equals("X")){
             topMid = 'O';
-        } else if (newValue.equals("Top Right")) {
+        } else if (newValue.equals("TR")) {
             topRight = 'O';
-        }else if (newValue.equals("Middle Left")) {
+        }else if (newValue.equals("ML")) {
             midLeft = 'O';
-        }else if (newValue.equals("Middle Middle")) {
+        }else if (newValue.equals("MM")) {
             midMid = 'O';
-        }else if (newValue.equals("Middle Right")) {
+        }else if (newValue.equals("MR")) {
             midRight = 'O';
         }else if (newValue.equals("Bottom Left")) {
             bottomLeft = 'O';
@@ -80,15 +80,14 @@ public class GameBoard {
         }
     }
 
-    public void checkWinner(boolean newValue) {
-
+    public boolean checkWinner(boolean newValue) {
+        boolean lWinner = newValue;
         if (Character.toString(topLeft).equals(Character.toString(topMid)) && Character.toString(topMid).equals(Character.toString(topRight)) && Character.toString(topLeft).equals("X")){
             System.out.println("Player X is the winner!");
-            isWinner = newValue;
+            isWinner = true;
+            return isWinner;
         }
-    }
-
-    //Methods for the class to obtain the field values
+    }    //Methods for the class to obtain the field values
     public void setTL(char newValue) {
         topLeft = newValue;
     }

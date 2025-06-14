@@ -20,17 +20,22 @@ public class Main {
         gameBoard.bottomLeft ='~';
         gameBoard.bottomMid ='~';
         gameBoard.bottomRight ='~';
+        gameBoard.isWinner = false;
 
         gameBoard.getBoard();
 
-        for (boolean winner = gameBoard.isWinner ; winner == false;){
+        for (gameBoard.isWinner == false){
             String turnOne = scanner.nextLine();
             gameBoard.userOneTurn(turnOne);
-            gameBoard.checkWinner(winner);
+            gameBoard.checkWinner();
             gameBoard.getBoard();
+
+            if (gameBoard.isWinner) {
+                break;
+            }
             String turnTwo = scanner.nextLine();
             gameBoard.userTwoTurn(turnTwo);
-            gameBoard.checkWinner(winner);
+            gameBoard.checkWinner();
             gameBoard.getBoard();
         }
 
