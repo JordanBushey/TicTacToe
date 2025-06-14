@@ -13,8 +13,17 @@ public class Main {
 
         gameBoard.topLeft = '~';
         gameBoard.topMid = '~';
+        gameBoard.topRight ='~';
+        gameBoard.midLeft ='~';
+        gameBoard.midMid ='~';
+        gameBoard.midRight ='~';
+        gameBoard.bottomLeft ='~';
+        gameBoard.bottomMid ='~';
+        gameBoard.bottomRight ='~';
 
-        System.out.println(gameBoard.getTopLeft() + gameBoard.getTopMid());
+        System.out.println(gameBoard.getTopLeft() + gameBoard.getTopMid() + gameBoard.getTopRight());
+        System.out.println(gameBoard.getMidLeft() + gameBoard.getMidMid() + gameBoard.getMidRight());
+        System.out.println(gameBoard.getBottomLeft() + gameBoard.getBottomMid() + gameBoard.getBottomRight());
 
         //Create Player Builder Class
 

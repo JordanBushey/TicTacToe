@@ -1,5 +1,6 @@
 public class GameBoard {
     //gameBoard has 9 fields
+
     public char topLeft;
     public char topMid;
     public char topRight;
@@ -30,14 +31,44 @@ public class GameBoard {
         topLeft = newValue;
     }
 
+    public void setTM(char newValue) {
+        topMid = newValue;
+    }
+
     public String getTopLeft() {
-        String dTopLeft = Character.toString(topLeft);
-        return dTopLeft;
+        return Character.toString(topLeft);
     }
 
     public String getTopMid() {
-        String dTopMid = Character.toString(topMid);
-        return dTopMid;
+        return Character.toString(topMid);
+    }
+
+    public String getTopRight() {
+        return Character.toString(topRight);
+    }
+
+    public String getMidLeft() {
+        return Character.toString(midLeft);
+    }
+
+    public String getMidMid() {
+        return Character.toString(midMid);
+    }
+
+    public String getMidRight() {
+        return Character.toString(midRight);
+    }
+
+    public String getBottomLeft() {
+        return Character.toString(bottomLeft);
+    }
+
+    public String getBottomMid() {
+        return Character.toString(bottomMid);
+    }
+
+    public String getBottomRight() {
+        return Character.toString(bottomRight);
     }
 
 
