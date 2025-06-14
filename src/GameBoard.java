@@ -33,9 +33,47 @@ public class GameBoard {
     public void userOneTurn(String newValue) {
         if (newValue.equals("Top Left")){
             topLeft = 'X';
-        } else if (newValue.equals("Top Middle")){
+        } else if (newValue.equals("Top Middle") && !Character.toString(topMid).equals("O")){
             topMid = 'X';
-        } else {
+        } else if (newValue.equals("Top Right")) {
+            topRight = 'X';
+        }else if (newValue.equals("Middle Left")) {
+            midLeft = 'X';
+        }else if (newValue.equals("Middle Middle")) {
+            midMid = 'X';
+        }else if (newValue.equals("Middle Right")) {
+            midRight = 'X';
+        }else if (newValue.equals("Bottom Left")) {
+            bottomLeft = 'X';
+        }else if (newValue.equals("Bottom Middle")) {
+            bottomMid = 'X';
+        }else if (newValue.equals("Bottom Right")) {
+            bottomRight = 'X';
+        }else {
+            System.err.println("This is not an option orrrrr maybe I broke it :(");
+        }
+    }
+
+    public void userTwoTurn(String newValue) {
+        if (newValue.equals("Top Left")){
+            topLeft = 'O';
+        } else if (newValue.equals("Top Middle") && !Character.toString(topMid).equals("X")){
+            topMid = 'O';
+        } else if (newValue.equals("Top Right")) {
+            topRight = 'O';
+        }else if (newValue.equals("Middle Left")) {
+            midLeft = 'O';
+        }else if (newValue.equals("Middle Middle")) {
+            midMid = 'O';
+        }else if (newValue.equals("Middle Right")) {
+            midRight = 'O';
+        }else if (newValue.equals("Bottom Left")) {
+            bottomLeft = 'O';
+        }else if (newValue.equals("Bottom Middle")) {
+            bottomMid = 'O';
+        }else if (newValue.equals("Bottom Right")) {
+            bottomRight = 'O';
+        }else {
             System.err.println("This is not an option orrrrr maybe I broke it :(");
         }
     }

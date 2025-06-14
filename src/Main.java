@@ -11,8 +11,6 @@ public class Main {
         //Initialize the board
         GameBoard gameBoard = new GameBoard();
 
-        gameBoard.getBoard();
-
         gameBoard.topLeft = '~';
         gameBoard.topMid = '~';
         gameBoard.topRight ='~';
@@ -25,11 +23,15 @@ public class Main {
 
         gameBoard.getBoard();
 
-        gameBoard.getBoard();
-
         String turnOne = scanner.nextLine();
 
         gameBoard.userOneTurn(turnOne);
+
+        gameBoard.getBoard();
+
+        String turnTwo = scanner.nextLine();
+
+        gameBoard.userTwoTurn(turnTwo);
 
         gameBoard.getBoard();
 
