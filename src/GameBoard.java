@@ -14,11 +14,12 @@ public class GameBoard {
     public char bottomLeft;
     public char bottomMid;
     public char bottomRight;
+    public boolean isWinner;
 
     //Constructor used to initialize the class
     private void gameBoard(char sTopLeft, char sTopMid, char sTopRight,
                      char sMidLeft, char sMidMid, char sMidRight,
-                     char sBotRight, char sBotMid, char sBotLeft){
+                     char sBotRight, char sBotMid, char sBotLeft, boolean sIsWinner ){
         topLeft = sTopLeft;
         topMid = sTopMid;
         topRight =sTopRight;
@@ -28,6 +29,7 @@ public class GameBoard {
         bottomLeft = sBotLeft;
         bottomMid = sBotMid;
         bottomRight = sBotRight;
+        isWinner = sIsWinner;
     }
 
     public void userOneTurn(String newValue) {
@@ -75,6 +77,14 @@ public class GameBoard {
             bottomRight = 'O';
         }else {
             System.err.println("This is not an option orrrrr maybe I broke it :(");
+        }
+    }
+
+    public void checkWinner(boolean newValue) {
+
+        if (Character.toString(topLeft).equals(Character.toString(topMid)) && Character.toString(topMid).equals(Character.toString(topRight)) && Character.toString(topLeft).equals("X")){
+            System.out.println("Player X is the winner!");
+            isWinner = newValue;
         }
     }
 

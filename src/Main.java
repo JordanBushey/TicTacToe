@@ -23,17 +23,16 @@ public class Main {
 
         gameBoard.getBoard();
 
-        String turnOne = scanner.nextLine();
-
-        gameBoard.userOneTurn(turnOne);
-
-        gameBoard.getBoard();
-
-        String turnTwo = scanner.nextLine();
-
-        gameBoard.userTwoTurn(turnTwo);
-
-        gameBoard.getBoard();
+        for (boolean winner = gameBoard.isWinner ; winner == false;){
+            String turnOne = scanner.nextLine();
+            gameBoard.userOneTurn(turnOne);
+            gameBoard.checkWinner(winner);
+            gameBoard.getBoard();
+            String turnTwo = scanner.nextLine();
+            gameBoard.userTwoTurn(turnTwo);
+            gameBoard.checkWinner(winner);
+            gameBoard.getBoard();
+        }
 
         //Create a 2 users and method for X or O
 
