@@ -1,6 +1,10 @@
 public class GameBoard {
     //gameBoard has 9 fields
 
+   // public char[] boardArray =  {
+   //         '~', '~', '~', '~', '~', '~', '~', '~', '~'
+   // };
+
     public char topLeft;
     public char topMid;
     public char topRight;
@@ -34,6 +38,13 @@ public class GameBoard {
     public void setTM(char newValue) {
         topMid = newValue;
     }
+
+    public void getBoard() {
+        System.out.println(Character.toString(topLeft) + Character.toString(topMid) + Character.toString(topRight));
+        System.out.println(Character.toString(midLeft) + Character.toString(midMid) + Character.toString(midRight));
+        System.out.println(Character.toString(bottomLeft) + Character.toString(bottomMid) + Character.toString(bottomRight));
+    }
+
 
     public String getTopLeft() {
         return Character.toString(topLeft);

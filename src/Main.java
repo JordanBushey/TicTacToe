@@ -21,9 +21,9 @@ public class Main {
         gameBoard.bottomMid ='~';
         gameBoard.bottomRight ='~';
 
-        System.out.println(gameBoard.getTopLeft() + gameBoard.getTopMid() + gameBoard.getTopRight());
-        System.out.println(gameBoard.getMidLeft() + gameBoard.getMidMid() + gameBoard.getMidRight());
-        System.out.println(gameBoard.getBottomLeft() + gameBoard.getBottomMid() + gameBoard.getBottomRight());
+        gameBoard.getBoard();
+
+
 
         //Create Player Builder Class
 
