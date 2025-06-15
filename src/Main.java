@@ -8,19 +8,15 @@ public class Main {
 
         MainFrame frame = new MainFrame();
 
-        frame.setSize(500, 600);
-        frame.setLayout(null);
-        frame.setVisible(true);
-
-        JTextField textFieldTitle = new JTextField(50);
-        frame.add(textFieldTitle, BorderLayout.CENTER);
-
         JMenuBar menuBar = new JMenuBar();
         JMenu menuFile = new JMenu("File");
         JMenuItem menuItemExit = new JMenuItem("Exit");
         menuFile.add(menuItemExit);
-
         menuBar.add(menuFile);
+
+        JTextField textFieldTitle = new JTextField("Let's Play Tic Tac Toe!",50 );
+
+        frame.add(textFieldTitle, BorderLayout.CENTER);
 
         //adds menu bar to the frame
         frame.setJMenuBar(menuBar);
