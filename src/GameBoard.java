@@ -69,11 +69,11 @@ public class GameBoard {
             midMid = 'O';
         }else if (newValue.equals("MR")) {
             midRight = 'O';
-        }else if (newValue.equals("Bottom Left")) {
+        }else if (newValue.equals("BL")) {
             bottomLeft = 'O';
-        }else if (newValue.equals("Bottom Middle")) {
+        }else if (newValue.equals("BM")) {
             bottomMid = 'O';
-        }else if (newValue.equals("Bottom Right")) {
+        }else if (newValue.equals("BR")) {
             bottomRight = 'O';
         }else {
             System.err.println("This is not an option orrrrr maybe I broke it :(");

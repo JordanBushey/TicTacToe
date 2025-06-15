@@ -6,11 +6,24 @@ import javax.swing.*;
 public class Main {
     public static void main(String[] args) {
 
-        JFrame frame = new JFrame();
+        MainFrame frame = new MainFrame();
+
         frame.setSize(500, 600);
         frame.setLayout(null);
         frame.setVisible(true);
 
+        JTextField textFieldTitle = new JTextField(50);
+        frame.add(textFieldTitle, BorderLayout.CENTER);
+
+        JMenuBar menuBar = new JMenuBar();
+        JMenu menuFile = new JMenu("File");
+        JMenuItem menuItemExit = new JMenuItem("Exit");
+        menuFile.add(menuItemExit);
+
+        menuBar.add(menuFile);
+
+        //adds menu bar to the frame
+        frame.setJMenuBar(menuBar);
 
 
         //Create the Scanner Object
@@ -35,10 +48,10 @@ public class Main {
             gameBoard.getBoard();
             String turnOne = scanner.nextLine();
             gameBoard.userOneTurn(turnOne);
-            gameBoard.getBoard();
             gameBoard.checkWinner();
 
             if (gameBoard.isWinner) {
+                //WHILE LOOP CHECKING FOR ERROR - ADD ERROR VARIABLE TO GAMEBOARD PROBABLY WITHIN USERMETHODS
                 break;
             }
 
