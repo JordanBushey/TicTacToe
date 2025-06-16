@@ -9,10 +9,17 @@ public class Main {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                GamePlayer frame = new GamePlayer();
-                frame.setVisible(true);
+                GamePlayer gamePlayer = new GamePlayer();
+                gamePlayer.prepareGUI();
+                gamePlayer.setVisible(true);
             }
         });
+
+
+
+
+
+
         //Create the Scanner Object
         // Scanner scanner = new Scanner(System.in);
 
