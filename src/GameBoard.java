@@ -15,11 +15,12 @@ public class GameBoard {
     public char bottomMid;
     public char bottomRight;
     public boolean isWinner;
+    public int player;
 
     //Constructor used to initialize the class
     private void gameBoard(char sTopLeft, char sTopMid, char sTopRight,
                      char sMidLeft, char sMidMid, char sMidRight,
-                     char sBotRight, char sBotMid, char sBotLeft, boolean sIsWinner ){
+                     char sBotRight, char sBotMid, char sBotLeft, boolean sIsWinner, int sPlayer ){
         topLeft = sTopLeft;
         topMid = sTopMid;
         topRight =sTopRight;
@@ -30,6 +31,7 @@ public class GameBoard {
         bottomMid = sBotMid;
         bottomRight = sBotRight;
         isWinner = sIsWinner;
+        player = sPlayer;
     }
 
     public void userOneTurn(String newValue) {

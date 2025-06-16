@@ -6,9 +6,6 @@ import javax.swing.*;
 public class Main {
     public static void main(String[] args) {
 
-
-
-
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
@@ -17,11 +14,12 @@ public class Main {
             }
         });
         //Create the Scanner Object
-        Scanner scanner = new Scanner(System.in);
+        // Scanner scanner = new Scanner(System.in);
 
         //Initialize the board
-        GameBoard gameBoard = new GameBoard();
+        // GameBoard gameBoard = new GameBoard();
 
+        /*
         gameBoard.topLeft = '~';
         gameBoard.topMid = '~';
         gameBoard.topRight ='~';
@@ -32,24 +30,27 @@ public class Main {
         gameBoard.bottomMid ='~';
         gameBoard.bottomRight ='~';
         gameBoard.isWinner = false;
-
+        gameBoard.player = 1;
 
         while (!gameBoard.isWinner){
             gameBoard.getBoard();
             String turnOne = scanner.nextLine();
             gameBoard.userOneTurn(turnOne);
             gameBoard.checkWinner();
+            gameBoard.player = 2;
 
             if (gameBoard.isWinner) {
                 //WHILE LOOP CHECKING FOR ERROR - ADD ERROR VARIABLE TO GAMEBOARD PROBABLY WITHIN USERMETHODS
                 break;
             }
-
             gameBoard.getBoard();
             String turnTwo = scanner.nextLine();
             gameBoard.userTwoTurn(turnTwo);
             gameBoard.checkWinner();
+            gameBoard.player = 1;
         }
+        */
+
 
         //Method to determine tie
 
