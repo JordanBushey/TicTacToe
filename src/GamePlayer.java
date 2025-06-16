@@ -21,4 +21,5 @@ public class GamePlayer extends JFrame {
         //Set Frame Location to the center of the screen
         setLocationRelativeTo(null);
     }
+
 }
