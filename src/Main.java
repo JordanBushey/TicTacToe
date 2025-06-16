@@ -6,22 +6,15 @@ import javax.swing.*;
 public class Main {
     public static void main(String[] args) {
 
-        MainFrame frame = new MainFrame();
-
-        JMenuBar menuBar = new JMenuBar();
-        JMenu menuFile = new JMenu("File");
-        JMenuItem menuItemExit = new JMenuItem("Exit");
-        menuFile.add(menuItemExit);
-        menuBar.add(menuFile);
-
-        JTextField textFieldTitle = new JTextField("Let's Play Tic Tac Toe!",50 );
-
-        frame.add(textFieldTitle, BorderLayout.CENTER);
-
-        //adds menu bar to the frame
-        frame.setJMenuBar(menuBar);
 
 
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                GamePlayer frame = new GamePlayer();
+                frame.setVisible(true);
+            }
+        });
         //Create the Scanner Object
         Scanner scanner = new Scanner(System.in);
 
