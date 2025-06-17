@@ -26,12 +26,11 @@ public class GamePlayer extends JFrame {
         pack();
         //Set Frame Location to the center of the screen
         setLocationRelativeTo(null);
-        showEvent();
 
     }
 
-    void showEvent() {
-        topLeftButton.setActionCommand("Top Left");
+    void playerOne() {
+        topLeftButton.setActionCommand("Top Left X");
         topMiddleButton.setActionCommand("Top Middle");
         topRightButton.setActionCommand("Top Right");
 
@@ -40,17 +39,26 @@ public class GamePlayer extends JFrame {
         topMiddleButton.addActionListener(new ButtonClickListener());
     }
 
+    void playerTwo() {
+        topLeftButton.setActionCommand("Top Left O");
+
+        topLeftButton.addActionListener(new ButtonClickListener());
+
+    }
+
     private class ButtonClickListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent e) {
             String command = e.getActionCommand();
 
             if(command.equals("Top Left")) {
-                topLeftButton.setText("click");
+                topLeftButton.setText("X");
             } else if(command.equals("Top Middle")) {
                 topMiddleButton.setText("click");
             } else if (command.equals("Top Right")) {
                 topRightButton.setText("click");
+            } else if (command.equals("Top Left O")) {
+                topLeftButton.setText("O");
             }
 
         }
