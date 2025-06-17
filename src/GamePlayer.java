@@ -29,6 +29,41 @@ public class GamePlayer extends JFrame {
 
     }
 
+    public String getTopLeftButton() {
+        return topLeftButton.getText();
+    }
+
+    public String getTopMiddleButton() {
+        return topMiddleButton.getText();
+    }
+
+    public String getTopRightButton() {
+        return topRightButton.getText();
+    }
+    public String getMiddleLeftButton() {
+        return middleLeftButton.getText();
+    }
+
+    public String getMiddleMiddleButton() {
+        return middleMiddleButton.getText();
+    }
+
+    public String getMiddleRightButton() {
+        return middleRightButton.getText();
+    }
+    public String getBottomLeftButton() {
+        return bottomLeftButton.getText();
+    }
+
+    public String getBottomMiddleButton() {
+        return bottomMiddleButton.getText();
+    }
+
+    public String getBottomRightButton() {
+        return bottomRightButton.getText();
+    }
+
+
     void playerOne() {
         topLeftButton.setActionCommand("Top Left X");
         topMiddleButton.setActionCommand("Top Middle X");
