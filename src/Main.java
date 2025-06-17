@@ -28,14 +28,14 @@ public class Main {
                 gameBoard.player = 1;
 
 
-                while (!gameBoard.isWinner) {
-                    while (gameBoard.player == 1) {
-                        gamePlayer.playerTwo();
-                    }
-                    while (gameBoard.player == 2) {
-                        gamePlayer.playerTwo();
-                    }
-                }
+                //while (!gameBoard.isWinner) {
+                //    while (gameBoard.player == 1) {
+                        gamePlayer.playerOne();
+                 //   }
+//while (gameBoard.player == 2) {
+                   //     gamePlayer.playerTwo();
+                  //  }
+             //   }
             }
 
 
