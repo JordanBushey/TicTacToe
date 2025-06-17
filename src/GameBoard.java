@@ -1,9 +1,13 @@
+import javax.swing.*;
+
 public class GameBoard {
     //gameBoard has 9 fields
 
    // public char[] boardArray =  {
    //         '~', '~', '~', '~', '~', '~', '~', '~', '~'
    // };
+
+
 
     public char topLeft;
     public char topMid;
@@ -33,6 +37,7 @@ public class GameBoard {
         isWinner = sIsWinner;
         player = sPlayer;
     }
+
 
     public void userOneTurn(String newValue) {
         if (newValue.equals("TL")){
@@ -82,32 +87,32 @@ public class GameBoard {
         }
     }
 
-    public void checkWinner() {
+    public boolean checkWinner() {
         if (Character.toString(topLeft).equals(Character.toString(topMid)) && Character.toString(topMid).equals(Character.toString(topRight)) && !Character.toString(topRight).equals("~")){
             System.out.println("Player " + Character.toString(topLeft) + " is the Winner");
-            isWinner = true;
+            return isWinner = true;
         } else if (Character.toString(midLeft).equals(Character.toString(midMid)) && Character.toString(midMid).equals(Character.toString(midRight)) && !Character.toString(midRight).equals("~")){
             System.out.println("Player " + Character.toString(midLeft) + " is the Winner");
-            isWinner = true;
+            return isWinner = true;
         } else if (Character.toString(bottomLeft).equals(Character.toString(bottomMid)) && Character.toString(bottomMid).equals(Character.toString(bottomRight)) && !Character.toString(bottomRight).equals("~")){
             System.out.println("Player " + Character.toString(bottomLeft) + " is the Winner");
-            isWinner = true;
+            return isWinner = true;
         } else if (Character.toString(topLeft).equals(Character.toString(midLeft)) && Character.toString(midLeft).equals(Character.toString(bottomLeft)) && !Character.toString(bottomLeft).equals("~")) {
             System.out.println("Player " + Character.toString(topLeft) + " is the Winner");
-            isWinner = true;
+            return isWinner = true;
         } else if (Character.toString(topMid).equals(Character.toString(midMid)) && Character.toString(midMid).equals(Character.toString(bottomMid)) && !Character.toString(bottomMid).equals("~")){
             System.out.println("Player " + Character.toString(topMid) + " is the Winner");
-            isWinner = true;
+            return isWinner = true;
         } else if (Character.toString(topRight).equals(Character.toString(midRight)) && Character.toString(midRight).equals(Character.toString(bottomRight)) && !Character.toString(bottomRight).equals("~")) {
             System.out.println("Player " + Character.toString(topRight) + " is the Winner");
-            isWinner = true;
+            return isWinner = true;
         } else if (Character.toString(topLeft).equals(Character.toString(midMid)) && Character.toString(midMid).equals(Character.toString(bottomRight)) && !Character.toString(bottomRight).equals("~")) {
             System.out.println("Player " + Character.toString(topLeft) + " is the Winner");
-            isWinner = true;
+            return isWinner = true;
         } else if (Character.toString(topRight).equals(Character.toString(midMid)) && Character.toString(midMid).equals(Character.toString(bottomLeft)) && !Character.toString(bottomRight).equals("~")) {
             System.out.println("Player " + Character.toString(topRight) + " is the Winner");
-            isWinner = true;
-        }
+            return isWinner = true;
+        }else {return isWinner = false;}
     }
 
     //Methods for the class to obtain the field values

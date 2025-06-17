@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class GamePlayer extends JFrame {
+public class GamePlayer extends JFrame  {
     private JPanel contentPane;
     private JButton topLeftButton;
     private JButton middleLeftButton;
@@ -26,6 +26,7 @@ public class GamePlayer extends JFrame {
         pack();
         //Set Frame Location to the center of the screen
         setLocationRelativeTo(null);
+
 
     }
 
@@ -59,10 +60,17 @@ public class GamePlayer extends JFrame {
         return bottomMiddleButton.getText();
     }
 
-    public String getBottomRightButton() {
-        return bottomRightButton.getText();
+    public JButton getBottomRightButton() {
+        return bottomRightButton;
     }
 
+    public char getBottomRightChar() {
+        return bottomRightButton.getText().charAt(0);
+    }
+
+    public void updateBoxValue(String newValue, JButton newButton) {
+        newButton.setText(newValue);
+    }
 
     void playerOne() {
         topLeftButton.setActionCommand("Top Left X");
