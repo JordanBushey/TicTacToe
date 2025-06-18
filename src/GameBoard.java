@@ -2,17 +2,19 @@ import javax.swing.*;
 
 public class GameBoard {
 
-
     public char[] boardSquares;
     public boolean isWinner;
     public int player;
 
 
     //Constructor used to initialize the class
-    private void gameBoard(char[] sBoardSquares, boolean sIsWinner, int sPlayer ){
-        boardSquares = sBoardSquares;
-        isWinner = sIsWinner;
-        player = sPlayer;
+    public GameBoard() {
+        boardSquares = new char[9];
+        for (int i = 1; 9 > i; i++) {
+            boardSquares[i] = '*';
+        }
+        isWinner = false;
+        player = 1;
     }
 
 

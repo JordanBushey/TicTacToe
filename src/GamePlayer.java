@@ -64,67 +64,24 @@ public class GamePlayer extends JFrame  {
         return bottomRightButton;
     }
 
-    public void setButton(JButton button, String newValue) {
-        button.setText(newValue);
+    public void setTopLeftButton(String value){
+        topLeftButton.setText(value);
     }
 
-    public void setTopLeftButton(){
-        topLeftButton.setText("X");
+    public void setTopMiddleButton(String value){topMiddleButton.setText(value);}
+
+
+    void clickListener(ActionListener listener) {
+        topLeftButton.addActionListener(listener);
+        topRightButton.addActionListener(listener);
+        topMiddleButton.addActionListener(listener);
+        middleLeftButton.addActionListener(listener);
+        middleRightButton.addActionListener(listener);
+        middleMiddleButton.addActionListener(listener);
+        bottomLeftButton.addActionListener(listener);
+        bottomRightButton.addActionListener(listener);
+        bottomMiddleButton.addActionListener(listener);
     }
 
 
-    public void updateBoxValue(String newValue, JButton newButton) {
-        newButton.setText(newValue);
-    }
-
-
-    void playerOne() {
-        topLeftButton.setActionCommand("Top Left");
-        topMiddleButton.setActionCommand("Top Middle");
-        topRightButton.setActionCommand("Top Right");
-        middleLeftButton.setActionCommand("Middle Left");
-        middleMiddleButton.setActionCommand("Middle Middle");
-        middleRightButton.setActionCommand("Middle Right");
-        bottomLeftButton.setActionCommand("Bottom Left");
-        bottomMiddleButton.setActionCommand("Bottom Middle");
-        bottomRightButton.setActionCommand("Bottom Right");
-
-        topLeftButton.addActionListener(new ButtonClickListener());
-        topRightButton.addActionListener(new ButtonClickListener());
-        topMiddleButton.addActionListener(new ButtonClickListener());
-        middleLeftButton.addActionListener(new ButtonClickListener());
-        middleRightButton.addActionListener(new ButtonClickListener());
-        middleMiddleButton.addActionListener(new ButtonClickListener());
-        bottomLeftButton.addActionListener(new ButtonClickListener());
-        bottomRightButton.addActionListener(new ButtonClickListener());
-        bottomMiddleButton.addActionListener(new ButtonClickListener());
-    }
-
-    private class ButtonClickListener implements ActionListener {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            String command = e.getActionCommand();
-
-            if(command.equals("Top Left")) {
-                topLeftButton.setText("X");
-            } else if(command.equals("Top Middle")) {
-                topMiddleButton.setText("X");
-            } else if (command.equals("Top Right")) {
-                topRightButton.setText("X");
-            } else if(command.equals("Middle Left")) {
-                middleLeftButton.setText("X");
-            } else if(command.equals("Middle Middle")) {
-                middleMiddleButton.setText("X");
-            } else if (command.equals("Middle Right")) {
-                middleRightButton.setText("X");
-            }else if(command.equals("Bottom Left")) {
-                bottomLeftButton.setText("X");
-            } else if(command.equals("Bottom Middle")) {
-                bottomMiddleButton.setText("X");
-            } else if (command.equals("Bottom Right")) {
-                bottomRightButton.setText("X");
-            }
-        }
-
-    }
 }
