@@ -7,8 +7,6 @@ public class GameBoard {
    //         '~', '~', '~', '~', '~', '~', '~', '~', '~'
    // };
 
-
-
     public char topLeft;
     public char topMid;
     public char topRight;

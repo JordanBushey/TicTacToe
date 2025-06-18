@@ -30,80 +30,65 @@ public class GamePlayer extends JFrame  {
 
     }
 
-    public String getTopLeftButton() {
-        return topLeftButton.getText();
+    public JButton getTopLeftButton() {
+        return topLeftButton;
     }
 
-    public String getTopMiddleButton() {
-        return topMiddleButton.getText();
+    public JButton getTopMiddleButton() {
+        return topMiddleButton;
     }
 
-    public String getTopRightButton() {
-        return topRightButton.getText();
+    public JButton getTopRightButton() {
+        return topRightButton;
     }
-    public String getMiddleLeftButton() {
-        return middleLeftButton.getText();
-    }
-
-    public String getMiddleMiddleButton() {
-        return middleMiddleButton.getText();
+    public JButton getMiddleLeftButton() {
+        return middleLeftButton;
     }
 
-    public String getMiddleRightButton() {
-        return middleRightButton.getText();
-    }
-    public String getBottomLeftButton() {
-        return bottomLeftButton.getText();
+    public JButton getMiddleMiddleButton() {
+        return middleMiddleButton;
     }
 
-    public String getBottomMiddleButton() {
-        return bottomMiddleButton.getText();
+    public JButton getMiddleRightButton() {
+        return middleRightButton;
+    }
+    public JButton getBottomLeftButton() {
+        return bottomLeftButton;
+    }
+
+    public JButton getBottomMiddleButton() {
+        return bottomMiddleButton;
     }
 
     public JButton getBottomRightButton() {
         return bottomRightButton;
     }
 
-    public char getBottomRightChar() {
-        return bottomRightButton.getText().charAt(0);
+    public void setButton(JButton button, String newValue) {
+        button.setText(newValue);
     }
+
 
     public void updateBoxValue(String newValue, JButton newButton) {
         newButton.setText(newValue);
     }
 
-    void playerOne() {
-        topLeftButton.setActionCommand("Top Left X");
-        topMiddleButton.setActionCommand("Top Middle X");
-        topRightButton.setActionCommand("Top Right X");
-        middleLeftButton.setActionCommand("Middle Left X");
-        middleMiddleButton.setActionCommand("Middle Middle X");
-        middleRightButton.setActionCommand("Middle Right X");
-        bottomLeftButton.setActionCommand("Bottom Left X");
-        bottomMiddleButton.setActionCommand("Bottom Middle X");
-        bottomRightButton.setActionCommand("Bottom Right X");
-
-        topLeftButton.addActionListener(new ButtonClickListener());
-        topRightButton.addActionListener(new ButtonClickListener());
-        topMiddleButton.addActionListener(new ButtonClickListener());
-        middleLeftButton.addActionListener(new ButtonClickListener());
-        middleRightButton.addActionListener(new ButtonClickListener());
-        middleMiddleButton.addActionListener(new ButtonClickListener());
-        bottomLeftButton.addActionListener(new ButtonClickListener());
-        bottomRightButton.addActionListener(new ButtonClickListener());
-        bottomMiddleButton.addActionListener(new ButtonClickListener());
+    public String clickedButton(JButton newButton) {
+        String str;
+        str = newButton.getText();
+        return  str;
     }
 
-    void playerTwo() {
-        topLeftButton.setActionCommand("Top Left O");
-        topMiddleButton.setActionCommand("Top Middle O");
-        topRightButton.setActionCommand("Top Right O");
-        middleLeftButton.setActionCommand("Middle Left O");
-        middleMiddleButton.setActionCommand("Middle Middle O");
-        middleRightButton.setActionCommand("Middle Right O");
-        bottomLeftButton.setActionCommand("Bottom Left O");
-        bottomMiddleButton.setActionCommand("Bottom Middle O");
-        bottomRightButton.setActionCommand("Bottom Right O");
+    void playerOne() {
+        topLeftButton.setActionCommand("Top Left");
+        topMiddleButton.setActionCommand("Top Middle");
+        topRightButton.setActionCommand("Top Right");
+        middleLeftButton.setActionCommand("Middle Left");
+        middleMiddleButton.setActionCommand("Middle Middle");
+        middleRightButton.setActionCommand("Middle Right");
+        bottomLeftButton.setActionCommand("Bottom Left");
+        bottomMiddleButton.setActionCommand("Bottom Middle");
+        bottomRightButton.setActionCommand("Bottom Right");
 
         topLeftButton.addActionListener(new ButtonClickListener());
         topRightButton.addActionListener(new ButtonClickListener());
@@ -121,44 +106,25 @@ public class GamePlayer extends JFrame  {
         public void actionPerformed(ActionEvent e) {
             String command = e.getActionCommand();
 
-            if(command.equals("Top Left X")) {
+            if(command.equals("Top Left")) {
                 topLeftButton.setText("X");
-            } else if(command.equals("Top Middle X")) {
+            } else if(command.equals("Top Middle")) {
                 topMiddleButton.setText("X");
-            } else if (command.equals("Top Right X")) {
+            } else if (command.equals("Top Right")) {
                 topRightButton.setText("X");
-            } else if(command.equals("Middle Left X")) {
+            } else if(command.equals("Middle Left")) {
                 middleLeftButton.setText("X");
-            } else if(command.equals("Middle Middle X")) {
+            } else if(command.equals("Middle Middle")) {
                 middleMiddleButton.setText("X");
-            } else if (command.equals("Middle Right X")) {
+            } else if (command.equals("Middle Right")) {
                 middleRightButton.setText("X");
-            }if(command.equals("Bottom Left X")) {
+            }if(command.equals("Bottom Left")) {
                 bottomLeftButton.setText("X");
-            } else if(command.equals("Bottom Middle X")) {
+            } else if(command.equals("Bottom Middle")) {
                 bottomMiddleButton.setText("X");
-            } else if (command.equals("Bottom Right X")) {
+            } else if (command.equals("Bottom Right")) {
                 bottomRightButton.setText("X");
-            }  if(command.equals("Top Left O")) {
-                topLeftButton.setText("O");
-            } else if(command.equals("Top Middle O")) {
-                topMiddleButton.setText("O");
-            } else if (command.equals("Top Right O")) {
-                topRightButton.setText("O");
-            } else if(command.equals("Middle Left O")) {
-                middleLeftButton.setText("O");
-            } else if(command.equals("Middle Middle O")) {
-                middleMiddleButton.setText("O");
-            } else if (command.equals("Middle Right O")) {
-                middleRightButton.setText("O");
-            }if(command.equals("Bottom Left O")) {
-                bottomLeftButton.setText("O");
-            } else if(command.equals("Bottom Middle O")) {
-                bottomMiddleButton.setText("O");
-            } else if (command.equals("Bottom Right O")) {
-                bottomRightButton.setText("O");
             }
-
         }
 
     }
