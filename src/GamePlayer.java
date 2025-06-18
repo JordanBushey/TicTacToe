@@ -68,16 +68,15 @@ public class GamePlayer extends JFrame  {
         button.setText(newValue);
     }
 
+    public void setTopLeftButton(){
+        topLeftButton.setText("X");
+    }
+
 
     public void updateBoxValue(String newValue, JButton newButton) {
         newButton.setText(newValue);
     }
 
-    public String clickedButton(JButton newButton) {
-        String str;
-        str = newButton.getText();
-        return  str;
-    }
 
     void playerOne() {
         topLeftButton.setActionCommand("Top Left");
@@ -118,7 +117,7 @@ public class GamePlayer extends JFrame  {
                 middleMiddleButton.setText("X");
             } else if (command.equals("Middle Right")) {
                 middleRightButton.setText("X");
-            }if(command.equals("Bottom Left")) {
+            }else if(command.equals("Bottom Left")) {
                 bottomLeftButton.setText("X");
             } else if(command.equals("Bottom Middle")) {
                 bottomMiddleButton.setText("X");
