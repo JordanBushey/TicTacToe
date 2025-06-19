@@ -14,10 +14,11 @@ public class Main {
                 GameBoard model = new GameBoard();
 
                 GameController controller = new GameController(model, view);
-                for (int i = 1; 9 > i; i++){
-                    System.out.println(model.getBoardSquare(i));
+//                for (int i = 1; 9 > i; i++){
+//                    System.out.println(model.getBoardSquare(i));
+//
+//                }
 
-                }
 
             }
 
