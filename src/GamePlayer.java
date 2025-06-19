@@ -68,7 +68,38 @@ public class GamePlayer extends JFrame  {
         topLeftButton.setText(value);
     }
 
-    public void setTopMiddleButton(String value){topMiddleButton.setText(value);}
+    public void setTopMiddleButton(String value){
+        topMiddleButton.setText(value);
+    }
+
+    public void setTopRightButton(String value) {
+        topRightButton.setText(value);
+    }
+
+    public void setMiddleLeftButton(String value) {
+        middleLeftButton.setText(value);
+    }
+
+    public void setMiddleMiddleButton(String value) {
+        middleMiddleButton.setText(value);
+    }
+
+    public void setMiddleRightButton(String value) {
+        middleRightButton.setText(value);
+    }
+
+    public void setBottomLeftButton(String value) {
+        bottomLeftButton.setText(value);
+    }
+
+    public void setBottomMiddleButton(String value) {
+        bottomMiddleButton.setText(value);
+    }
+
+    public void setBottomRightButton(String value) {
+        bottomRightButton.setText(value);
+    }
+
 
 
     void clickListener(ActionListener listener) {

@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class GameController {
+public  class GameController implements ActionListener {
 
     private GameBoard model;
     private GamePlayer view;
@@ -11,8 +11,9 @@ public class GameController {
         this.model = model;
         this.view = view;
 
-
+        this.view.clickListener(this);
     }
+
 
     public void updateView(GamePlayer newValue) {
         model.boardSquares[0] = newValue.getTopLeftButton().getText().charAt(0);
@@ -26,32 +27,14 @@ public class GameController {
         model.boardSquares[8] = newValue.getBottomRightButton().getText().charAt(0);
     }
 
-    public class ButtonClickListener implements ActionListener {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-            String command = e.getActionCommand();
-
-            if (command.equals("Top Left")) {
-                model.setBoardSquares(0, "X");
-            } else if (command.equals("Top Middle")) {
-                model.setBoardSquares(1, "X");
-            } else if (command.equals("Top Right")) {
-                model.setBoardSquares(2, "X");
-            } else if (command.equals("Middle Left")) {
-                model.setBoardSquares(3, "X");
-            } else if (command.equals("Middle Middle")) {
-                model.setBoardSquares(4, "X");
-            } else if (command.equals("Middle Right")) {
-                model.setBoardSquares(5, "X");
-            } else if (command.equals("Bottom Left")) {
-                model.setBoardSquares(6, "X");
-            } else if (command.equals("Bottom Middle")) {
-                model.setBoardSquares(7, "X");
-            } else if (command.equals("Bottom Right")) {
-                model.setBoardSquares(8, "X");
-            }
-        }
-
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        JButton buttonClicked = (JButton) e.getSource();
+        System.out.println(buttonClicked.getText());
+        buttonClicked.setText("x");
 
     }
 }
+
+
+
