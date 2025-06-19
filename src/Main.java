@@ -1,5 +1,3 @@
-import java.awt.*;
-import java.util.Scanner; //Import Scanner Class for user input
 import javax.swing.*;
 
 

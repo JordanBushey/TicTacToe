@@ -48,23 +48,34 @@ public  class GameController implements ActionListener {
             buttonClicked.setText("X");
             updateModel(view);
             model.checkWinner();
+            model.checkDraw();
             if (model.isWinner) {
-                System.out.println("We have a winner! X");
+                System.out.println("X is the winner!");
                 model.resetBoard();
                 updateView(model);
-            } else {
+            } else if (model.isDraw) {
+                System.out.println("It's a draw!");
+                model.resetBoard();
+                updateView(model);
+            }else {
                 model.switchPlayer();
-            }
+                }
         } else {
             buttonClicked.setText("O");
             updateModel(view);
             model.checkWinner();
+            model.checkDraw();
             if (model.isWinner) {
-                System.out.println("We have a winner!");
+                System.out.println("O is the winner!");
                 model.resetBoard();
                 updateView(model);
+            }else if (model.isDraw) {
+                System.out.println("It's a draw!");
+                model.resetBoard();
+                updateView(model);
+            }else {
+                model.switchPlayer();
             }
-            model.switchPlayer();
         }
     }
 }
